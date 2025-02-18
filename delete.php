@@ -2,10 +2,9 @@
 
 require_once "connexion.php";
 
-    var_dump($_POST);
 
 if(isset($_POST["id"])) {
-    $id = $_POST["id"];
+    $id = strip_tags($_POST["id"]);
 
 
     $q = $db->prepare("DELETE FROM students WHERE id = :id");
