@@ -21,7 +21,7 @@ if(!empty($_POST)) {
         $id_promo = (int) $_POST["promo"];
 
         //SQL part
-        $q = $db->prepare("UPDATE students SET firstname= :firstname, lastname= :lastname, ID_pormo= :id_promo)");
+        $q = $db->prepare("UPDATE students SET firstname= :firstname, lastname= :lastname, ID_promo= :id_promo");
 
         // bindParam() accepte uniquement une variable qui est interprétée au moment de l'execute()
         $q->bindParam(":firstname", $firstname, PDO::PARAM_STR);
